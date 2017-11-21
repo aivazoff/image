@@ -80,7 +80,7 @@ class ImageFromFile extends GD
      */
     public static function formatExtension($file)
     {
-        return preg_replace('/^jpg|jpe$/', 'jpeg', pathinfo($file, PATHINFO_EXTENSION));
+        return preg_replace('/^jpg|jpe$/', 'jpeg', strtolower(pathinfo($file, PATHINFO_EXTENSION)));
     }
 
     /**

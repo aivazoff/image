@@ -244,7 +244,20 @@ abstract class GD extends \ArmdPro\Image
     public function save($filePath, $quality = null)
     {
         $ext = ImageFromFile::formatExtension($filePath);
-        return call_user_func_array("image{$ext}", func_get_args());
+        $args = [$this->getResource(), $filePath];
+
+        switch($this->getType())
+        {
+            case(IMAGETYPE_JPEG):
+                $args[] = $quality ?: 85;
+                break;
+
+            case(IMAGETYPE_PNG):
+                $args[] = $quality ?: 9;
+                break;
+        }
+
+        return call_user_func_array("image{$ext}", $args);
     }
 
     public function output()
