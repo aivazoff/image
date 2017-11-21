@@ -277,7 +277,7 @@ abstract class GD extends \ArmdPro\Image
         }
 
         header("Content-Type: {$this->getMimeType()}");
-        return call_user_func_array("image{$ext}", $args);
+        exit(call_user_func_array("image{$ext}", $args));
     }
 
     /**
