@@ -263,7 +263,7 @@ abstract class GD extends \ArmdPro\Image
     public function output()
     {
         header("Content-Type: {$this->getMimeType()}");
-        $ext = image_type_to_extension($this->getType());
+        $ext = ltrim(image_type_to_extension($this->getType()), '.');
         call_user_func("image{$ext}", $this->getResource());
     }
 
