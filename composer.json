@@ -18,7 +18,7 @@
     "autoload": {
         "files": [],
         "psr-4": {
-            "ArmdPro\\Image\\": "src/"
+            "ArmdPro\\": "src/"
         }
     }
 }
