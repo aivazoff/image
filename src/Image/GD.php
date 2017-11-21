@@ -260,11 +260,24 @@ abstract class GD extends \ArmdPro\Image
         return call_user_func_array("image{$ext}", $args);
     }
 
-    public function output()
+    public function output($quality = null)
     {
-        header("Content-Type: {$this->getMimeType()}");
         $ext = ltrim(image_type_to_extension($this->getType()), '.');
-        call_user_func("image{$ext}", $this->getResource());
+        $args = [$this->getResource(), null];
+
+        switch($this->getType())
+        {
+            case(IMAGETYPE_JPEG):
+                $args[] = $quality ?: 85;
+                break;
+
+            case(IMAGETYPE_PNG):
+                $args[] = $quality ?: 9;
+                break;
+        }
+
+        header("Content-Type: {$this->getMimeType()}");
+        return call_user_func_array("image{$ext}", $args);
     }
 
     /**
