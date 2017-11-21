@@ -1,0 +1,24 @@
+{
+    "name": "armd-pro/image",
+    "type": "library",
+    "description": "Image is a PHP library",
+    "keywords": ["image"],
+    "homepage": "armd.pro",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arman Badalyan",
+            "email": "armancho1@gmail.com",
+            "homepage": "armd.pro"
+        }
+    ],
+    "require": {
+        "php": ">=5.5"
+    },
+    "autoload": {
+        "files": [],
+        "psr-4": {
+            "ArmdPro\\Image\\": "src/"
+        }
+    },
+}
