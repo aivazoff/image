@@ -3,13 +3,13 @@
     "type": "library",
     "description": "Image is a PHP library",
     "keywords": ["image"],
-    "homepage": "armd.pro",
+    "homepage": "https://github.com/armd-pro/image",
     "license": "MIT",
     "authors": [
         {
             "name": "Arman Badalyan",
             "email": "armancho1@gmail.com",
-            "homepage": "armd.pro"
+            "homepage": "https://armd.pro"
         }
     ],
     "require": {
