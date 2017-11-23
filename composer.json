@@ -1,7 +1,8 @@
 {
     "name": "armd-pro/image",
-    "type": "library",
     "description": "Image is a PHP library",
+    "version" : "1.0.0",
+    "type": "library",
     "keywords": ["image", "image resize", "image crop", "image modification"],
     "homepage": "https://github.com/armd-pro/image",
     "license": "MIT",
